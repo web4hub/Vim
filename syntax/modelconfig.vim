@@ -35,7 +35,7 @@ syntax match modelConfigAssignment /[=:]/
 " Strings and scalar values
 " ---------------------------------------------------------------------------
 
-syntax region modelConfigString start=/"/ skip=/\\\|\\"/ end=/"/ contains=modelConfigEscape
+syntax region modelConfigString start=+"+ skip=+\\\\\|\\\"+ end=+"+ contains=modelConfigEscape
 syntax region modelConfigString start=/'/ skip=/\\\|\\'/ end=/'/ contains=modelConfigEscape
 syntax match modelConfigEscape /\\[\\\/"'bfnrtu]/
 syntax match modelConfigNumber /\<\%(-\=\d\+\%([.]\d\+\)\=\%([eE][+-]\=\d\+\)\=\)\>/
