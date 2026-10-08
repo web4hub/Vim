@@ -9,10 +9,11 @@ if exists("b:did_ftplugin")
 endif
 let b:did_ftplugin = 1
 
+" Set buffer encoding before disabling modifications.
 setlocal binary
 setlocal readonly
+setlocal fileencoding=
 setlocal nomodifiable
 setlocal buftype=nowrite
-setlocal fileencoding=
 
 let b:undo_ftplugin = "setlocal nobinary noreadonly modifiable buftype< fileencoding<"
