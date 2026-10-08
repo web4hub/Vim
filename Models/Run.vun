@@ -1,0 +1,10 @@
+framework module MyModel {
+  umbrella header "MyModel.h"
+
+  export *
+  module * {
+    export *
+  }
+
+  requires cplusplus20
+}
